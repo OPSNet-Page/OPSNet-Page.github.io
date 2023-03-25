@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Open-vocabulary Panoptic Segmentation with Embedding Modulation">
+  <meta name="keywords" content="Open-vocabulary, Panoptic Segmentation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Open-vocabulary Panoptic Segmentation with Embedding Modulation</title>
+
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/hku_icon.jpeg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://xavierchen34.github.io/">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Information
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://xavierchen34.github.io/">
+            Personal website
+          </a>
+          <a class="navbar-item" href="https://hszhao.github.io/">
+            Lab website
+          </a>
+          <a class="navbar-item" href="https://github.com/XavierCHEN34/">
+            Github
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Open-vocabulary Panoptic Segmentation with Embedding Modulation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://xavierchen34.github.io/">Xi Chen</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://people.csail.mit.edu/lishuang/">Shuang Li</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://ai.facebook.com/people/ser-nam-lim/">Ser-Nam Lim</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://groups.csail.mit.edu/vision/torralbalab/">Antonio Torralba</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://hszhao.github.io/">Hengshuang Zhao</a><sup>1,2</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>The University of Hong Kong,</span>
+            <span class="author-block"><sup>2</sup>Massachusetts Institute of Technology</span>
+            <span class="author-block"><sup>3</sup>Meta AI</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2303.11324.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2303.11324"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://github.com/XavierCHEN34"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video(comming soon)</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/XavierCHEN34/OPSNet"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code(comming soon)</span>
+                  </a>
+              </span>
+
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./generate_images/images/image1/image1.mp4"
+                    type="video/mp4">
+          </video>
+
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./generate_images/images/image2/image2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item ade">
+          <video poster="" id="ade" autoplay controls muted loop playsinline height="10%">
+            <source src="./generate_images/images/image4/image4.mp4"
+                    type="video/mp4">
+          </video>
+
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./generate_images/images/image3/image3.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Open-vocabulary image segmentation is attracting increasing
+            attention due to its critical applications in the real
+            world. Traditional closed-vocabulary segmentation methods
+            are not able to characterize novel objects, whereas several
+            recent open-vocabulary attempts obtain unsatisfactory
+            results, i.e., notable performance reduction on the closedvocabulary
+            and massive demand for extra data. To this
+            end, we propose <strong>OPSNet</strong>, an <strong>omnipotent</strong> and 
+            <strong>data-efficient</strong>
+            framework for Open-vocabulary Panoptic Segmentation.
+            Specifically, the exquisitely designed Embedding Modulation
+            module, together with several meticulous components,
+            enables adequate embedding enhancement and information
+            exchange between the segmentation model and the
+            visual-linguistic well-aligned CLIP encoder, resulting in
+            superior segmentation performance under both open- and
+            closed-vocabulary settings with much fewer need of additional
+            data. Extensive experimental evaluations are conducted
+            across multiple datasets (e.g., COCO, ADE20K,
+            Cityscapes, and PascalContext) under various circumstances,
+            where the proposed OPSNet achieves state-of-theart
+            results, which demonstrates the effectiveness and generality
+            of the proposed approach.
+          </p>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Closed-vocabulary prediction</h2>
+          <p>
+            <strong>OPSNet</strong> is an omnipotent solution that maintains the SOTA performance on the training domain.
+          </p>
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="./generate_images/images/image5/image5.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+
+      <div class="column">
+        <h2 class="title is-3">Cross-dataset prediction</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              <strong>OPSNet</strong> also shows promising performance for cross-dataset validation like ADE20K datasets.
+            </p>
+            <video id="cd-video" autoplay controls muted loop playsinline height="100%">
+              <source src="./generate_images/images/image6/image6.mp4" type="video/mp4">
+            </video>
+            
+            
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Open-vocabulary prediction</h2>
+          <div class="content has-text-justified">
+            <p>
+              We leverage the concept set of ImageNet-21K to make open-vocabulary predictions. We could make prediction 
+              not only for plain 21k categories but also with hierachies.
+            </p>
+          </div>
+        <div class="columns is-centered has-text-centered">
+          <div class="column">
+            <video id="cd-video" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/images/ow.mp4"
+                       type="video/mp4">
+             </video>
+          </div>
+        </div>
+
+
+
+      
+
+    
+
+
+    
+
+
+
+    
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Approach</h2>
+
+        
+        <h3 class="title is-4">Pipeline Overview</h3>
+
+        <div class="columns is-centered has-text-centered">
+          <div class="column">
+            <img src="static/images/pipeline.png" alt="">
+          </div>
+        </div>
+
+        <div class="content has-text-justified">
+          <p>
+            For an input image, the segmentation model predicts updated
+            query embeddings, binary masks, and IoU scores. Meanwhile, we leverage a <strong>Spatial Adapter</strong> to extract CLIP visual features. We use these
+            CLIP features to enhance the query embeddings and use binary masks to <strong>Mask Pool</strong> them into CLIP embeddings. Afterward, the CLIP Embed,
+            Query Embeds, and Concept Embeds are fed into the <strong>Embedding Modulation</strong> module to produce the modulated embeddings. Next, we
+            use <strong>Mask Filtering</strong> to remove low-quality proposals thus getting masks and embeddings for each object. Finally, we use the modulated
+            embeddings to match the text embeddings extracted by the CLIP text encoder and assign a category label for each mask.
+          </p>
+        </div>
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{chen2023open,
+      title={Open-vocabulary Panoptic Segmentation with Embedding Modulation},
+      author={Chen, Xi and Li, Shuang and Lim, Ser-Nam and Torralba, Antonio and Zhao, Hengshuang},
+      journal={arXiv preprint arXiv:2303.11324},
+      year={2023}
+    }</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="https://arxiv.org/pdf/2303.11324.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/XavierCHEN34/OPSNet" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="content">
+        <p>
+          The template is borrowed from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
