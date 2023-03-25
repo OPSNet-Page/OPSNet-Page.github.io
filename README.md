@@ -1,15 +1,15 @@
-# Nerfies
+# OPSNet
 
-This is the repository that contains source code for the [Nerfies website](https://nerfies.github.io).
+This is the repository that contains source code for the [OPSNet website](https://OPSNet-Page.github.io).
 
-If you find Nerfies useful for your work please cite:
+If you find OPSNet useful for your work please cite:
 ```
-@article{park2021nerfies
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
-}
+@article{chen2023open,
+      title={Open-vocabulary Panoptic Segmentation with Embedding Modulation},
+      author={Chen, Xi and Li, Shuang and Lim, Ser-Nam and Torralba, Antonio and Zhao, Hengshuang},
+      journal={arXiv preprint arXiv:2303.11324},
+      year={2023}
+    }
 ```
 
 # Website License
